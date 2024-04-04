@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+.anim {
+    display: flex;
+    margin: 20px;
+    height: 880px;
+    width: 1200px;
+    border: solid;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    position: relative; 
+}
+
+.flor, .imgflor {
+    height: 250px;
+    align-self: flex-end;
+    justify-self: center;
+    position: absolute; 
+    bottom: 50px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    animation: flor 10s forwards;
+    animation-delay: 8s;
+    opacity: 0;
+}
+
+.sol, .imgsol {
+    height: 180px;
+    align-self: flex-start;
+    position: absolute; 
+    left: 40%; 
+    opacity: 0;
+    animation: sol 5s forwards;
+    animation-delay: 15s;
+}
+
+.nube, .imgnube {
+    height: 200px;
+    align-self: flex-start;
+    position: absolute;
+    top: 0;
+    left: -100px; 
+    animation: nube 30s linear; 
+    
+}
+
+.lluvia, .imglluvia {
+    height: 600px;
+    width: 400px;
+    align-self: center;
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: lluvia 10s forwards;
+   animation-delay: 6s;
+}
+.mensage{
+    font-family: "Butterfly Kids", cursive;
+    position: absolute;
+    align-self: center;
+    left: 8%;
+    font-size: 100px;
+    text-align: center;
+    animation: mensage 20s forwards;
+    animation-delay: 16s;
+    opacity: 0;
+    color: white; 
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000, 
+                 0    0   5px black; 
+}
+
+@keyframes nube {
+    0% {
+        transform: translateX(-200px); /* Movemos la nube fuera del contenedor */
+    }
+    20% {
+        transform: translateX(500px); /* Movemos la nube al centro */
+    }
+    40% {
+        transform: translateX(500px); /* Mantenemos la nube en el centro */
+    }
+   
+    55% {
+        transform: translateX(1150px); /* Movemos la nube a la posición de salida a la derecha */
+    }
+    100% {
+        transform: translateX(1400px); /* Movemos la nube fuera del contenedor */
+    }
+}
+
+
+
+
+@keyframes  sol{
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes  lluvia{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes  flor{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes  mensage{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}
